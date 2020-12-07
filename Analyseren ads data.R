@@ -185,22 +185,11 @@ sheets <- list('fb_target'=targeted_sum)
 write.xlsx(sheets,'fb target.xlsx')
 
 
-## export Google Sheets ##
-# gs4_get('https://docs.google.com/spreadsheets/d/1K9s8J1XyK5tHggGkG6MmIdSu_nuNH-vJAINnIpu1VCY/edit#gid=966467927')
-sheet_write(datum,'1kILuuFuU5wvWVeHS4juy_pkfdwRB-O6kYe1LwwofI8Q', sheet = 1) #dag
-Sys.sleep(1)
-sheet_write(week,'11GiZCnLcQMY1JTxZDf4IfZfGOKpN5r7F_j17A9sngWk', sheet = 1) #week
-Sys.sleep(1)
-sheet_write(totaal,'1JQv_AlrbjDIEI1FjwQs8GBT5_HncMtMGbAFrWKhm-1Q', sheet = 1) #totaal
-Sys.sleep(1)
-sheet_write(targeted_sum,'1ShwHW1D18on7sCJJtsMugvcy6urb0fAu07teFO-eDnY', sheet = 1) #fb_target
-Sys.sleep(1)
-sheet_write(top_ads,'1K9s8J1XyK5tHggGkG6MmIdSu_nuNH-vJAINnIpu1VCY') #top_ads
-
 #######################################################################################################################
 ################################################### Printscreens ########################################################
 #######################################################################################################################
-namen_fb <- paste(top_ads$advertiser_name[which(!is.na(top_ads$Facebook))], rep(c(' fb.png'),length(which(!is.na(top_ads$Facebook)))), sep = '')
+
+                                      namen_fb <- paste(top_ads$advertiser_name[which(!is.na(top_ads$Facebook))], rep(c(' fb.png'),length(which(!is.na(top_ads$Facebook)))), sep = '')
 urls_fb <- top_ads$Facebook[which(!is.na(top_ads$Facebook))]
 namen_ggl <- paste(top_ads$advertiser_name[which(!is.na(top_ads$Google))], rep(c(' ggl.png'),length(which(!is.na(top_ads$Google)))), sep = '')
 urls_ggl <- top_ads$Google[which(!is.na(top_ads$Google))]
